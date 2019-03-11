@@ -12,7 +12,7 @@ cd gtacrash_for_distrib
 ```
 
 ### Apply a Pre-trained Model
-- Download the YouTubeCrash dataset:
+- Download YouTubeCrash (Real accident dataset collected from YouTube):
 ```
 bash ./datasets/download_dataset.sh ae_photos
 ```
@@ -27,7 +27,7 @@ python ./scripts/test_script.py
 The test results will be printed.  
 
 ### Train
-- Download the GTACrash dataset (Synthetic accident data collected from Grand Theft Auto V):
+- Download GTACrash (Synthetic accident dataset collected from Grand Theft Auto V):
 ```bash
 bash ./datasets/download_dataset.sh horse2zebra
 ```
@@ -41,12 +41,12 @@ python ./scripts/train_gta_script.py
 python ./scripts/train_yt_script.py
 ```
 
-Models will be saved in the folder `./checkpoints`.
+Models will be saved in the folder `./checkpoints/`.
 
 ### Visualize
 - Finally, visualize the prediction results of the model:
 ```bash
 python ./scripts/visualize_script.py
 ```
-The visualized results will be saved to : `./visualization`.
+The visualized results will be saved to : `./visualization/`.
 
