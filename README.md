@@ -14,11 +14,17 @@ git clone https://github.com/gnsrla12/CrashToNotCrash_code
 cd gtacrash_for_distrib
 ```
 
-### Apply a Pre-trained Model
+### Prepare Dataset
 - Download YouTubeCrash (Real accident dataset collected from YouTube):
 ```
 bash ./datasets/download_dataset.sh ae_photos
 ```
+- Download GTACrash (Synthetic accident dataset collected from Grand Theft Auto V):
+```bash
+bash ./datasets/download_dataset.sh horse2zebra
+```
+
+### Apply a Pre-trained Model
 - Download the pre-trained model trained on GTACrash:
 ```
 bash ./pretrained_models/download_model.sh style_cezanne
@@ -30,10 +36,6 @@ python ./scripts/test_script.py
 The test results will be printed.  
 
 ### Train
-- Download GTACrash (Synthetic accident dataset collected from Grand Theft Auto V):
-```bash
-bash ./datasets/download_dataset.sh horse2zebra
-```
 - Train a model on the GTACrash dataset:
 ```bash
 python ./scripts/train_gta_script.py
