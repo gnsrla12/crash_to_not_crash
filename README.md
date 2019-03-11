@@ -8,7 +8,7 @@
 - Install tensorflow
 - Clone this repo:
 ```bash
-git clone https://github.com/gnsrla12/GTACrash
+git clone https://github.com/gnsrla12/CrashToNotCrash_code
 cd gtacrash_for_distrib
 ```
 
