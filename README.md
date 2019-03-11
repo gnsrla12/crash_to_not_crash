@@ -16,7 +16,7 @@ cd gtacrash_for_distrib
 ```
 bash ./datasets/download_dataset.sh ae_photos
 ```
-- Download the pre-trained model trained on GTACrash dataset:
+- Download the pre-trained model trained on GTACrash:
 ```
 bash ./pretrained_models/download_model.sh style_cezanne
 ```
