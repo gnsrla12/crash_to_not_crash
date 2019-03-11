@@ -10,7 +10,7 @@ ttc = 1.8
 feature_extractor = 'vgg16'
 optimizer = 'adam'
 lr = 0.0001
-decay_lr_per = 3
+decay_lr_per = 2
 nepoch = 10
 init_steps_to_skip_eval = 1500
 
@@ -23,7 +23,7 @@ for train_proportion in [1.0]:
 			for n_RGBs, n_BBs in [(3,3)]:
 
 				os.system("python train.py " + \
-							"--name temp.gtaCrash.{train_proportion}.t-{ttc}s/{label_method}-{motion_model}/".format(
+							"--name gtaCrash.{train_proportion}.t-{ttc}s/{label_method}-{motion_model}/".format(
 											train_proportion=train_proportion, ttc=ttc, 
 											label_method=label_method, motion_model=motion_model) +\
 									"{n_RGBs}rgb{n_BBs}b.{feature_extractor}.{optimizer}.lr{lr}.decay_lr_per{decay_lr_per}.seed{seed} ".format(
