@@ -1,4 +1,4 @@
-# Crash to Not Crash: Learn to Identify Dangerous Vehicles using a Simulator
+## Crash to Not Crash: Learn to Identify Dangerous Vehicles using a Simulator
 ### [Tensorflow](https://github.com/gnsrla12/GTACrash) | [project page](https://sites.google.com/view/crash-to-not-crash) |   [paper](http://csuh.kaist.ac.kr/Suh_Crash_AAAI.pdf)
 
 
@@ -12,7 +12,7 @@ cd gtacrash_for_distrib
 ```
 
 ### Apply a Pre-trained Model
-- Download the test photos (taken by [Alexei Efros](https://www.flickr.com/photos/aaefros)):
+- Download the GTACrash dataset and YouTubeCrash dataset:
 ```
 bash ./datasets/download_dataset.sh ae_photos
 ```
@@ -20,11 +20,11 @@ bash ./datasets/download_dataset.sh ae_photos
 ```
 bash ./pretrained_models/download_model.sh style_cezanne
 ```
-- Now, let's generate Paul Cézanne style images:
+- Now, let's measure performance of our model on the YouTube test dataset:
 ```
-DATA_ROOT=./datasets/ae_photos name=style_cezanne_pretrained model=one_direction_test phase=test loadSize=256 fineSize=256 resize_or_crop="scale_width" th test.lua
+python ./script/test.py
 ```
-The test results will be saved to `./results/style_cezanne_pretrained/latest_test/index.html`.  
+The test results will be printed to `./results/style_cezanne_pretrained/latest_test/index.html`.  
 Please refer to [Model Zoo](#model-zoo) for more pre-trained models.
 `./examples/test_vangogh_style_on_ae_photos.sh` is an example script that downloads the pretrained Van Gogh style network and runs it on Efros's photos.
 
