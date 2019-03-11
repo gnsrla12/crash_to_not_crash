@@ -1,7 +1,9 @@
 ## Crash to Not Crash: Learn to Identify Dangerous Vehicles using a Simulator
 ### [Tensorflow](https://github.com/gnsrla12/CrashToNotCrash_code) | [Project page](https://sites.google.com/view/crash-to-not-crash) |   [Paper](http://csuh.kaist.ac.kr/Suh_Crash_AAAI.pdf)
 
-<img src='movie.gif' align="middle" width=384>
+<p align="center">
+  <img src="movie.gif">
+</p>
 
 ## Getting Started
 ### Installation
