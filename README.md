@@ -1,36 +1,55 @@
-# GTACrash
-
-# 1. Symbolic Regression
-The goal of this program is to find a expression that fits the given dataset with as small error as possible. For example, suppose your training data set includes tuples (x, y), from which you want to learn the best model f such that y = f(x) explains the given data set, as well as unseen test data set, as precisely as possible. If the training data consist of X = {1.2, 2, 3} and Y = {3.1, 4.6, 6.8}, and the test data set consist of X0 = {6, 5} and Y 0 = {13, 10.5}, one possible symbolic regression model would be y = 2x + 1. Figure 1 shows the result of symbolic regression.
-
-![Alt text](Figures/Figure1.png?raw=true "Title")
-
-With Genetic Programming, you can build candidate expressions for f , and evaluate them using Mean Square Error, which is calculated as follows:
-
-![Alt text](Figures/Figure2.png?raw=true "Title")
-
-# 2. Dataset
-The symbolic regression dataset we are using contains 57 input variables (x1,...,x57), 1 output variables, y and contains 747 rows. Using this dataset, this program evolves a symbolic regression model.
-
-# 3. How to get started
-
-The first program, "train.py" is an implementation of GP that takes a .csv file containing the training data as input, and prints out the evolved expression using Reverse Polish Notation. 
-
-The second program, "test.py" takes two inputs: the evolved RPN expression in one string, and a .csv file containing the test data. Subsequently, it evaluatse the given RPN expression on the test data and print out the MSE.
-
-Following ternimal and non-terminal nodes for GP, and corresponding symbols when printing out the evolved expression in RPN are used:
--  Terminals: x1,. . ., x57, as well as any floating point constant numbers
--  Unary Operators: ⇠ (unary minus), abs, sin, cos, tan, asin, acos, atan, sinh, cosh,
-tanh, exp, sqrt, log
--  Binary Operators: +, -, *, /,ˆ(power)
+# Crash to Not Crash: Learn to Identify Dangerous Vehicles using a Simulator
+### [Tensorflow](https://github.com/gnsrla12/GTACrash) | [project page](https://sites.google.com/view/crash-to-not-crash) |   [paper](http://csuh.kaist.ac.kr/Suh_Crash_AAAI.pdf)
 
 
-```sh
-# For example, x24   sin( 2x3) would be represented by x24 2 ^ 2 ~ x3 * sin -.
-# in directory "Simple_Genetic_Programming/"
-$ python training.py test.csv
-...
-x24 2 ^ 2 ~ x3 * sin - # this RPN equation can be different everytime the program is run
-$ python test.py "x24 2 ^ 2 ~ x3 * sin -" test.csv
-
+## Getting Started
+### Installation
+- Install tensorflow
+- Clone this repo:
+```bash
+git clone https://github.com/gnsrla12/GTACrash
+cd gtacrash_for_distrib
 ```
+
+### Apply a Pre-trained Model
+- Download the test photos (taken by [Alexei Efros](https://www.flickr.com/photos/aaefros)):
+```
+bash ./datasets/download_dataset.sh ae_photos
+```
+- Download the pre-trained model `style_cezanne` (For CPU model, use `style_cezanne_cpu`):
+```
+bash ./pretrained_models/download_model.sh style_cezanne
+```
+- Now, let's generate Paul Cézanne style images:
+```
+DATA_ROOT=./datasets/ae_photos name=style_cezanne_pretrained model=one_direction_test phase=test loadSize=256 fineSize=256 resize_or_crop="scale_width" th test.lua
+```
+The test results will be saved to `./results/style_cezanne_pretrained/latest_test/index.html`.  
+Please refer to [Model Zoo](#model-zoo) for more pre-trained models.
+`./examples/test_vangogh_style_on_ae_photos.sh` is an example script that downloads the pretrained Van Gogh style network and runs it on Efros's photos.
+
+### Train
+- Download a dataset (e.g. zebra and horse images from ImageNet):
+```bash
+bash ./datasets/download_dataset.sh horse2zebra
+```
+- Train a model:
+```bash
+DATA_ROOT=./datasets/horse2zebra name=horse2zebra_model th train.lua
+```
+- (CPU only) The same training command without using a GPU or CUDNN. Setting the environment variables ```gpu=0 cudnn=0``` forces CPU only
+```bash
+DATA_ROOT=./datasets/horse2zebra name=horse2zebra_model gpu=0 cudnn=0 th train.lua
+```
+- (Optionally) start the display server to view results as the model trains. (See [Display UI](#display-ui) for more details):
+```bash
+th -ldisplay.start 8000 0.0.0.0
+```
+
+### Test
+- Finally, test the model:
+```bash
+DATA_ROOT=./datasets/horse2zebra name=horse2zebra_model phase=test th test.lua
+```
+The test results will be saved to an HTML file here: `./results/horse2zebra_model/latest_test/index.html`.
+
