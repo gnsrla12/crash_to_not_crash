@@ -33,7 +33,7 @@ bash ./pretrained_models/download_model.sh style_cezanne
 ```
 python ./scripts/test_script.py
 ```
-The test results will be printed.  
+The test results will be printed. ROC-AUC should output 0.915411. (Note that the measured accuracy is when threshold of the predictor is fixed at 0.5, and that is not an appropriate metric for the binary classification task)
 
 ### Train
 - Train a model on the GTACrash dataset:
