@@ -46,12 +46,12 @@ python ./scripts/train_gta_script.py
 python ./scripts/train_yt_script.py
 ```
 
-Models will be saved in the folder `./checkpoints/`.
+The trained model will be saved to: `./checkpoints/`
 
 ### Visualize
 - Finally, visualize the prediction results of the model:
 ```bash
 python ./scripts/visualize_script.py
 ```
-The visualized results will be saved to : `./visualization/`.
+The visualized results will be saved to : `./visualization/`
 
