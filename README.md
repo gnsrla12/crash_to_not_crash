@@ -12,7 +12,7 @@ cd gtacrash_for_distrib
 ```
 
 ### Apply a Pre-trained Model
-- Download the GTACrash dataset and YouTubeCrash dataset:
+- Download the YouTubeCrash dataset:
 ```
 bash ./datasets/download_dataset.sh ae_photos
 ```
@@ -24,26 +24,16 @@ bash ./pretrained_models/download_model.sh style_cezanne
 ```
 python ./script/test.py
 ```
-The test results will be printed to `./results/style_cezanne_pretrained/latest_test/index.html`.  
-Please refer to [Model Zoo](#model-zoo) for more pre-trained models.
-`./examples/test_vangogh_style_on_ae_photos.sh` is an example script that downloads the pretrained Van Gogh style network and runs it on Efros's photos.
+The test results will be printed.  
 
 ### Train
-- Download a dataset (e.g. zebra and horse images from ImageNet):
+- Download the GTACrash dataset (Synthetic accident data collected from Grand Theft Auto V):
 ```bash
 bash ./datasets/download_dataset.sh horse2zebra
 ```
 - Train a model:
 ```bash
 DATA_ROOT=./datasets/horse2zebra name=horse2zebra_model th train.lua
-```
-- (CPU only) The same training command without using a GPU or CUDNN. Setting the environment variables ```gpu=0 cudnn=0``` forces CPU only
-```bash
-DATA_ROOT=./datasets/horse2zebra name=horse2zebra_model gpu=0 cudnn=0 th train.lua
-```
-- (Optionally) start the display server to view results as the model trains. (See [Display UI](#display-ui) for more details):
-```bash
-th -ldisplay.start 8000 0.0.0.0
 ```
 
 ### Test
