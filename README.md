@@ -17,17 +17,17 @@ cd gtacrash_for_distrib
 ### Prepare Dataset
 - Download YouTubeCrash (Real accident dataset collected from YouTube):
 ```
-bash ./datasets/download_dataset.sh ae_photos
+python ./datasets/download_ytcrash.py
 ```
 - Download GTACrash (Synthetic accident dataset collected from Grand Theft Auto V):
 ```bash
-bash ./datasets/download_dataset.sh horse2zebra
+python ./datasets/download_gtacrash.py
 ```
 
 ### Apply a Pre-trained Model
 - Download the pre-trained model trained on GTACrash:
 ```
-bash ./pretrained_models/download_model.sh style_cezanne
+python ./checkpoints/download_model.py
 ```
 - Now, let's measure performance of our model on the YouTube test dataset:
 ```
