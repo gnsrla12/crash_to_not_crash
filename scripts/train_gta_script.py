@@ -33,9 +33,6 @@ for train_proportion in [1.0]:
 								"--valid_root ./datasets/YouTubeCrash/test/ "+ \
 								"--test_root ./datasets/YouTubeCrash/test "+ \
 								"--train_dataset_proportion {} ".format(train_proportion)+ \
-								"--train_frames_per_scene 25 "+ \
-								"--valid_frames_per_scene 20 "+ \
-								"--test_frames_per_scene 20 "+ \
 								"--label_method {} ".format(label_method)+ \
 								"--motion_model {} ".format(motion_model)+ \
 								"--ttc_threshold {} ".format(ttc)+ \

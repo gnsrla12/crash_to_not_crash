@@ -30,17 +30,17 @@ def save_response_content(response, destination):
                 f.write(chunk)
 
 if __name__ == "__main__":
-    print("Downloading pretrained model...")
+    print("downloading pretrained model...")
     file_id = str("1ZNJSAN-96CVUakwtd1YMW70t2YXSVIdn")
     destination = str("./checkpoints/gtaCrash.1.0.t-1.8.zip")
     download_file_from_google_drive(file_id, destination)
-    print("Download completed!")
+    print("download completed!")
 
-    print("Unzipping pretrained model...")
+    print("unzipping pretrained model...")
     os.system("unzip ./checkpoints/gtaCrash.1.0.t-1.8.zip -d ./checkpoints")
-    print("Unzipping completed!")
+    print("unzipping completed!")
 
     os.system("rm ./checkpoints/gtaCrash.1.0.t-1.8.zip")
-    print("Zip file removed")
+    print("zip file removed")
 
 

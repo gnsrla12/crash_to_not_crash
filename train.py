@@ -1,6 +1,4 @@
 import time, random
-
-import matplotlib
 from matplotlib import pyplot as plt
 import tensorflow as tf
 import numpy as np
