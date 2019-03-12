@@ -23,6 +23,7 @@ python ./datasets/download_ytcrash.py
 ```bash
 python ./datasets/download_gtacrash.py
 ```
+You can skip downloading GTACrash if you just want to apply pretrained model to YouTubeCrash.
 
 ### Apply a Pre-trained Model
 - Download the pre-trained model trained on GTACrash:
