@@ -19,9 +19,9 @@ for n_RGBs, n_BBs in [(3,3)]:
 						"{n_RGBs}rgb{n_BBs}b.{feature_extractor}.{optimizer}.lr{lr}.decay_lr_per{decay_lr_per}.seed{seed} ".format(
 								n_RGBs=n_RGBs, n_BBs=n_BBs, feature_extractor=feature_extractor,
 								optimizer=optimizer, lr=lr, decay_lr_per=decay_lr_per, seed=seed)+ \
-				"--train_root ./datasets/youtubeCrash/train/ "+ \
-				"--valid_root ./datasets/youtubeCrash/test/ "+ \
-				"--test_root ./datasets/youtubeCrash/test/ "+ \
+				"--train_root ./datasets/YouTubeCrash/train/ "+ \
+				"--valid_root ./datasets/YouTubeCrash/test/ "+ \
+				"--test_root ./datasets/YouTubeCrash/test/ "+ \
 				"--ttc_threshold {} ".format(ttc)+ \
 				"--n_rgbs_per_sample {} ".format(n_RGBs)+ \
 				"--n_bbs_per_sample {} ".format(n_BBs)+ \
