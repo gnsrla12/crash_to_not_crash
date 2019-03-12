@@ -10,8 +10,8 @@
 - Install tensorflow
 - Clone this repo:
 ```bash
-git clone https://github.com/gnsrla12/CrashToNotCrash_code
-cd gtacrash_for_distrib
+git clone https://github.com/gnsrla12/crash_to_not_crash
+cd crash_to_not_crash
 ```
 
 ### Prepare Dataset
