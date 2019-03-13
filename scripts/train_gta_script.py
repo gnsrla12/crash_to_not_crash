@@ -10,7 +10,7 @@ ttc = 1.8
 feature_extractor = 'vgg16'
 optimizer = 'adam'
 lr = 0.0001
-decay_lr_per = 2
+decay_lr_per = 1
 nepoch = 10
 init_steps_to_skip_eval = 1500
 
