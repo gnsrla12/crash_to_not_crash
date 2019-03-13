@@ -39,7 +39,7 @@ The test results will be printed. ROC-AUC should output 0.915411. (Note that the
 ### Train
 - Train a model on the GTACrash dataset:
 ```bash
-python ./scripts/train_gta_script.py
+TBA (dataset in preparation)
 ```
 
 - Train a model on the YouTubeCrash dataset:
