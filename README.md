@@ -43,7 +43,7 @@ python ./scripts/visualize_script.py
 The visualized results will be saved to : `./visualization/`
 
 ### Train
-- Train a model on the GTACrash dataset with refined labels (Trained model will overwrite the existing pre-trained model). :
+- Train a model on the GTACrash dataset with refined labels (Trained model will overwrite the existing pre-trained model):
 ```bash
 python ./scripts/train_gta_script.py
 ```
