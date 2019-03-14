@@ -26,7 +26,7 @@ python ./datasets/download_gtacrash.py
 You can skip downloading GTACrash if you just want to apply pretrained model to YouTubeCrash.
 
 ### Apply a Pre-trained Model
-- Download the pre-trained model trained on GTACrash:
+- Download the pre-trained model trained on GTACrash with refined labels:
 ```
 python ./checkpoints/download_model.py
 ```
@@ -37,7 +37,7 @@ python ./scripts/test_script.py
 The test results will be printed. ROC-AUC should output 0.915411. (Note that the measured accuracy is when threshold of the predictor is fixed at 0.5, and that is not an appropriate metric for the binary classification task)
 
 ### Train
-- Train a model on the GTACrash dataset:
+- Train a model on the GTACrash dataset with refined labels:
 ```bash
 python ./scripts/train_gta_script.py
 ```
