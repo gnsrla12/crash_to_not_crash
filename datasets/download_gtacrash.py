@@ -52,35 +52,35 @@ def download_and_extract(file_id, dst, final_dst, level=1):
     print("zip file removed")
 
 if __name__ == "__main__":
-    # # Accident Images Part 1
-    # file_id = str("1xTqFxguYxvF8zf7_e_clAq2GTq1Wi3vC")
-    # dst = str("./datasets/GTACrash_accident_images_part1.tar.gz")
-    # final_dst = str("./datasets/GTACrash/accident")
-    # download_and_extract(file_id, dst, final_dst)
+    # Accident Images Part 1
+    file_id = str("1xTqFxguYxvF8zf7_e_clAq2GTq1Wi3vC")
+    dst = str("./datasets/GTACrash_accident_images_part1.tar.gz")
+    final_dst = str("./datasets/GTACrash/accident")
+    download_and_extract(file_id, dst, final_dst)
 
-    # # Accident Images Part 2
-    # file_id = str("1K_wEYFvyqMI_Dq_Au8d97Fb23RgCzS40")
-    # dst = str("./datasets/GTACrash_accident_images_part2.tar.gz")
-    # final_dst = str("./datasets/GTACrash/accident")
-    # download_and_extract(file_id, dst, final_dst)
+    # Accident Images Part 2
+    file_id = str("1K_wEYFvyqMI_Dq_Au8d97Fb23RgCzS40")
+    dst = str("./datasets/GTACrash_accident_images_part2.tar.gz")
+    final_dst = str("./datasets/GTACrash/accident")
+    download_and_extract(file_id, dst, final_dst)
 
-    # # Accident Images Part 3
-    # file_id = str("1JjuJ-h670FWYsaZ5V7XMGPNg8QNertRU")
-    # dst = str("./datasets/GTACrash_accident_images_part3.tar.gz")
-    # final_dst = str("./datasets/GTACrash/accident")
-    # download_and_extract(file_id, dst, final_dst)
+    # Accident Images Part 3
+    file_id = str("1JjuJ-h670FWYsaZ5V7XMGPNg8QNertRU")
+    dst = str("./datasets/GTACrash_accident_images_part3.tar.gz")
+    final_dst = str("./datasets/GTACrash/accident")
+    download_and_extract(file_id, dst, final_dst)
 
-    # # Nonaccident Images Part 1
-    # file_id = str("1fSEqEvhDm-vKm4ZPSddn08w6NuV3Zm4l")
-    # dst = str("./datasets/GTACrash_nonaccident_images_part1.tar.gz")
-    # final_dst = str("./datasets/GTACrash/nonaccident")
-    # download_and_extract(file_id, dst, final_dst)
+    # Nonaccident Images Part 1
+    file_id = str("1fSEqEvhDm-vKm4ZPSddn08w6NuV3Zm4l")
+    dst = str("./datasets/GTACrash_nonaccident_images_part1.tar.gz")
+    final_dst = str("./datasets/GTACrash/nonaccident")
+    download_and_extract(file_id, dst, final_dst)
 
-    # # Nonaccident Images Part 2
-    # file_id = str("1Q8xQMWrdbzSTjCa8Cr68Cnx1gN5DxTfP")
-    # dst = str("./datasets/GTACrash_nonaccident_images_part2.tar.gz")
-    # final_dst = str("./datasets/GTACrash/nonaccident")
-    # download_and_extract(file_id, dst, final_dst)
+    # Nonaccident Images Part 2
+    file_id = str("1Q8xQMWrdbzSTjCa8Cr68Cnx1gN5DxTfP")
+    dst = str("./datasets/GTACrash_nonaccident_images_part2.tar.gz")
+    final_dst = str("./datasets/GTACrash/nonaccident")
+    download_and_extract(file_id, dst, final_dst)
 
 
 
