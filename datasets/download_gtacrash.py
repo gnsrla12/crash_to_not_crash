@@ -33,7 +33,7 @@ def mkdir(path):
     if not os.path.exists(path):
         os.makedirs(path)
 
-def download_and_extract(file_id, dst, final_dst):
+def download_and_extract(file_id, dst, final_dst, level=1):
     print("downloading {}...".format(dst))
     download_file_from_google_drive(file_id, dst)
     print("download completed!")
@@ -41,7 +41,7 @@ def download_and_extract(file_id, dst, final_dst):
     print("extracting...")
     mkdir(final_dst)
     mkdir("./datasets/temp")
-    os.system("tar -xf {} --strip-components=1 -C ./datasets/temp".format(dst))
+    os.system("tar -xf {} --strip-components={} -C ./datasets/temp".format(dst, str(level)))
     files = os.listdir("./datasets/temp/")
     for f in files:
             shutil.move("./datasets/temp/"+f, final_dst)
@@ -88,28 +88,28 @@ if __name__ == "__main__":
     file_id = str("1LKHVBPeadPzbMZjsXyALD0ERMyayq1vv")
     dst = str("./datasets/GTACrash_accident_labels_part1.tar.gz")
     final_dst = str("./datasets/GTACrash/accident")
-    download_and_extract(file_id, dst, final_dst)
+    download_and_extract(file_id, dst, final_dst, level=2)
 
     # Accident Labels Part 2
     file_id = str("1CJmC21G4UOM1B2WnMax_aIkvk9X-Ho-R")
     dst = str("./datasets/GTACrash_accident_labels_part2.tar.gz")
     final_dst = str("./datasets/GTACrash/accident")
-    download_and_extract(file_id, dst, final_dst)
+    download_and_extract(file_id, dst, final_dst, level=2)
 
     # Accident Labels Part 3
     file_id = str("1Ikgkpl4EbZga2IrymInWlzyUmuWNK9eB")
     dst = str("./datasets/GTACrash_accident_labels_part3.tar.gz")
     final_dst = str("./datasets/GTACrash/accident")
-    download_and_extract(file_id, dst, final_dst)
+    download_and_extract(file_id, dst, final_dst, level=2)
 
     # Nonaccident Labels Part 1
     file_id = str("13G_MUZ00dw12YhJE-oxCI0KeH8UGzoWR")
     dst = str("./datasets/GTACrash_nonaccident_labels_part1.tar.gz")
     final_dst = str("./datasets/GTACrash/nonaccident")
-    download_and_extract(file_id, dst, final_dst)
+    download_and_extract(file_id, dst, final_dst, level=2)
 
     # Nonaccident Labels Part 2
     file_id = str("1zNs9YUDzXzYLuUunTCmQQPCHm51qjHHv")
     dst = str("./datasets/GTACrash_nonaccident_labels_part2.tar.gz")
     final_dst = str("./datasets/GTACrash/nonaccident")
-    download_and_extract(file_id, dst, final_dst)
+    download_and_extract(file_id, dst, final_dst, level=2)
