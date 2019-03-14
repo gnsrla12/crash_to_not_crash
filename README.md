@@ -36,8 +36,14 @@ python ./scripts/test_script.py
 ```
 The test results will be printed. ROC-AUC should output 0.915411. (Note that the measured accuracy is when threshold of the predictor is fixed at 0.5, and that is not an appropriate metric for the binary classification task)
 
+- Finally, visualize the prediction results of the pretrained model:
+```bash
+python ./scripts/visualize_script.py
+```
+The visualized results will be saved to : `./visualization/`
+
 ### Train
-- Train a model on the GTACrash dataset with refined labels:
+- Train a model on the GTACrash dataset with refined labels (Trained model will overwrite the existing pre-trained model). :
 ```bash
 python ./scripts/train_gta_script.py
 ```
@@ -48,11 +54,4 @@ python ./scripts/train_yt_script.py
 ```
 
 The trained model will be saved to: `./checkpoints/`
-
-### Visualize
-- Finally, visualize the prediction results of the model:
-```bash
-python ./scripts/visualize_script.py
-```
-The visualized results will be saved to : `./visualization/`
 
