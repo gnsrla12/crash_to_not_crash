@@ -10,7 +10,7 @@ ttc = 1.8
 feature_extractor = 'vgg16'
 optimizer = 'adam'
 lr = 0.0001
-decay_lr_per = 4
+decay_lr_per = 3
 
 for n_RGBs, n_BBs in [(3,3)]:
 

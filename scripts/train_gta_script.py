@@ -11,7 +11,7 @@ feature_extractor = 'vgg16'
 optimizer = 'adam'
 lr = 0.0001
 decay_lr_per = 1
-nepoch = 10
+nepoch = 5
 init_steps_to_skip_eval = 1500
 
 for train_proportion in [1.0]:
